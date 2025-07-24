@@ -19,5 +19,9 @@ services:
       DISABLE_IPV6: 'true'
 
     volumes:
-      - /data/hdd/volumes/nginx/data:/data
-      - /data/hdd/volumes/nginx/letsencrypt:/etc/letsencrypt
+      - data-volume:/data
+      - letsencrypt-volume:/etc/letsencrypt
+
+volumes:
+  data-volume:
+  letsencrypt-volume:
